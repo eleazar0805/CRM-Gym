@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #f6f5f2;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: #f6f5f2;
+  color: #17181f;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(239, 75, 53, .24);
+}
+
+@layer components {
+  .panel {
+    @apply rounded-lg border border-[#e5e0da] bg-white shadow-[0_1px_2px_rgba(22,24,31,.04)];
+  }
+
+  .field {
+    @apply min-h-10 rounded-lg border border-[#ded9d2] bg-white px-3 text-sm text-[#17181f] outline-none transition placeholder:text-[#92939b] focus:border-[#ef4b35] focus:ring-2 focus:ring-[#ef4b35]/15;
+  }
+
+  .button {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-[#ded9d2] bg-white px-4 text-sm font-extrabold text-[#17181f] transition hover:border-[#ef4b35]/80 hover:bg-[#fff5f2];
+  }
+
+  .button-primary {
+    @apply border-[#ef4b35] bg-[#ef4b35] text-white shadow-[0_14px_28px_rgba(239,75,53,.2)] hover:border-[#d43f2e] hover:bg-[#d43f2e];
+  }
+
+  .button-danger {
+    @apply border-red-200 bg-red-50 text-red-700 hover:border-red-300;
+  }
+}
